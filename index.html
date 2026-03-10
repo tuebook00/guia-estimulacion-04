@@ -31,6 +31,20 @@ body{
   overflow-x:hidden;
 }
 
+/* --- ESTA ES LA CORRECCIÓN PARA EL CELULAR --- */
+@media (max-width: 991px) {
+  .hero-visual {
+    display: block !important; /* Fuerza a que se vea en móviles */
+    margin-top: 30px;          /* Espacio superior para que no pegue con el texto */
+    width: 100%;
+  }
+  .hero-card {
+    margin: 0 auto;            /* Centra la tarjeta en la pantalla del celular */
+    max-width: 400px;          /* Evita que se estire demasiado a lo ancho */
+  }
+}
+/* ------------------------------------------- */
+</style>
 /* ═══════════════════════════════
    UTILITY
 ═══════════════════════════════ */
