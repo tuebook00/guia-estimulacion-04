@@ -456,12 +456,14 @@ nav{
 
 /* Image placeholder area */
 .inside-img-slot{
-  width:100%;height:200px;
+  width:100%;
+  min-height:200px;
   background:linear-gradient(135deg,var(--warm) 0%,#FFE8CC 100%);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   gap:10px;
   border-bottom:2px dashed rgba(232,86,26,0.2);
-  position:relative;overflow:hidden;
+  position:relative;
+  overflow:hidden;
   cursor:pointer;
   transition:background 0.2s;
 }
@@ -469,6 +471,7 @@ nav{
 .inside-img-slot::before{
   content:'';position:absolute;inset:0;
   background:radial-gradient(ellipse at 50% 50%,rgba(232,86,26,0.05) 0%,transparent 70%);
+  pointer-events:none;
 }
 .inside-img-icon{
   font-size:36px;opacity:0.5;
@@ -481,8 +484,10 @@ nav{
   font-size:11px;color:var(--text-muted);
 }
 .inside-img-slot img{
-  width:100%;height:100%;object-fit:cover;
+  width:100%;
+  height:auto;
   display:block;
+  object-fit:unset;
 }
 
 .inside-card-bottom{padding:24px 28px 28px;display:flex;gap:14px;align-items:flex-start;}
