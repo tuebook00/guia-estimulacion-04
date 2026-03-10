@@ -30,7 +30,6 @@ body{
   color:var(--text);
   overflow-x:hidden;
 }
-
 /* ═══════════════════════════════
    UTILITY
 ═══════════════════════════════ */
@@ -456,14 +455,12 @@ nav{
 
 /* Image placeholder area */
 .inside-img-slot{
-  width:100%;
-  min-height:200px;
+  width:100%;height:200px;
   background:linear-gradient(135deg,var(--warm) 0%,#FFE8CC 100%);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   gap:10px;
   border-bottom:2px dashed rgba(232,86,26,0.2);
-  position:relative;
-  overflow:hidden;
+  position:relative;overflow:hidden;
   cursor:pointer;
   transition:background 0.2s;
 }
@@ -471,7 +468,6 @@ nav{
 .inside-img-slot::before{
   content:'';position:absolute;inset:0;
   background:radial-gradient(ellipse at 50% 50%,rgba(232,86,26,0.05) 0%,transparent 70%);
-  pointer-events:none;
 }
 .inside-img-icon{
   font-size:36px;opacity:0.5;
@@ -484,10 +480,8 @@ nav{
   font-size:11px;color:var(--text-muted);
 }
 .inside-img-slot img{
-  width:100%;
-  height:auto;
+  width:100%;height:100%;object-fit:cover;
   display:block;
-  object-fit:unset;
 }
 
 .inside-card-bottom{padding:24px 28px 28px;display:flex;gap:14px;align-items:flex-start;}
@@ -841,9 +835,8 @@ footer{
    RESPONSIVE
 ═══════════════════════════════ */
 @media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr;gap:32px;}
-  .hero-visual{display:block;}
-  .hero-card{max-width:500px;margin:0 auto;}
+  .hero-grid{grid-template-columns:1fr;gap:40px;}
+  .hero-visual{display:none;}
   .hero-h1{font-size:40px;}
   .window-inner{grid-template-columns:1fr;}
   .benefits-grid{grid-template-columns:1fr 1fr;}
@@ -859,8 +852,6 @@ footer{
   .price-card{padding:32px 24px;}
   .price-current{font-size:56px;}
   .sticky-bar-text{font-size:12px;}
-  .hero-card-stats{grid-template-columns:1fr 1fr 1fr;}
-  .stat-big{font-size:24px;}
 }
 </style>
 </head>
@@ -941,34 +932,37 @@ footer{
         </div>
       </div>
 
-   <div class="hero-visual fade-up" style="transition-delay:0.2s">
-  <div class="hero-card">
-    <div class="hero-card-top" style="min-height:300px; background:#f9f9f9; display:flex; align-items:center; justify-content:center; border-bottom:2px dashed rgba(232,86,26,0.2); padding:0; overflow:hidden;">
-      <img src="inicio%20pagina.png" alt="Guía de Estimulación Temprana" style="width:100%; height:300px; object-fit:cover; display:block;">
-    </div>
+<div class="hero-visual fade-up" style="transition-delay:0.2s">
+        <div class="hero-card">
+          <div class="hero-card-top" style="min-height:300px; display:flex; align-items:center; justify-content:center; border-bottom:2px dashed rgba(232,86,26,0.2); padding:0; overflow:hidden;">
+            <img src="inicio pagina.png" alt="Portada de la Guía" style="width:100%; height:100%; object-fit:cover; display:block;">
+          </div>
 
-    <div class="hero-card-body">
-      <div class="hero-card-title">Guía <span>Completa</span> de<br>Estimulación Temprana</div>
-      <div class="hero-card-stats">
-        <div class="stat-cell">
-          <div class="stat-big">0–4</div>
-          <div class="stat-small">años de vida<br>cubiertos</div>
-        </div>
-        <div class="stat-cell">
-          <div class="stat-big">150+</div>
-          <div class="stat-small">actividades<br>prácticas</div>
-        </div>
-        <div class="stat-cell">
-          <div class="stat-big">10<span style="font-size:14px;color:var(--text-muted)">min</span></div>
-          <div class="stat-small">al día es<br>suficiente</div>
+          <div class="hero-card-body">
+            <div class="hero-card-title">Guía <span>Completa</span> de<br>Estimulación Temprana</div>
+            <div class="hero-card-stats">
+              <div class="stat-cell">
+                <div class="stat-big">0–4</div>
+                <div class="stat-small">años de vida<br>cubiertos</div>
+              </div>
+              <div class="stat-cell">
+                <div class="stat-big">150+</div>
+                <div class="stat-small">actividades<br>prácticas</div>
+              </div>
+              <div class="stat-cell">
+                <div class="stat-big">10<span style="font-size:14px;color:var(--text-muted)">min</span></div>
+                <div class="stat-small">al día es<br>suficiente</div>
+              </div>
+            </div>
+            <a href="#precio" class="btn-primary" style="width:100%;justify-content:center;font-size:15px;padding:14px;">
+              Ver precio especial →
+            </a>
+          </div>
         </div>
       </div>
-      <a href="#precio" class="btn-primary" style="width:100%;justify-content:center;font-size:15px;padding:14px;">
-        Ver precio especial →
-      </a>
     </div>
   </div>
-</div>
+</section>
 <!-- ═══════ WINDOW OF OPPORTUNITY ═══════ -->
 <section class="window-section" id="ciencia">
   <div class="container">
@@ -1064,7 +1058,6 @@ footer{
   </div>
 </section>
 
-<!-- ═══════ WHAT'S INSIDE ═══════ -->
 <section class="inside-section">
   <div class="container">
     <div class="section-tag fade-up"><span class="tag tag-orange">Contenido</span></div>
@@ -1075,65 +1068,61 @@ footer{
 
     <div class="inside-grid">
       <div class="inside-card fade-up">
-        <div class="inside-img-slot">
-          <div class="inside-img-icon">🖼️</div>
-          <div class="inside-img-label">Añade tu imagen aquí</div>
-          <div class="inside-img-sub">Hitos de Desarrollo · Recomendado: 600×400px</div>
+        <div class="inside-img-slot" style="background-color: #f9f9f9; height: 450px;">
+          <img src="ebookinterna1.png" alt="Hitos de Desarrollo" style="width:100%; height:100%; object-fit:contain; display:block;">
+          <div class="inside-img-sub">Hitos de Desarrollo</div>
         </div>
         <div class="inside-card-bottom">
           <div class="inside-num">01</div>
           <div class="inside-body">
             <div class="inside-title">Hitos de Desarrollo</div>
-            <div class="inside-desc">Guía mes a mes de qué esperar y qué estimular. Nunca más preguntarte "¿esto es normal para su edad?"</div>
+            <div class="inside-desc">Tu hijo comienza a descubrir el mundo, desarrollar nuevas habilidades y fortalecer las bases de su aprendizaje.</div>
           </div>
         </div>
       </div>
+
       <div class="inside-card fade-up" style="transition-delay:0.05s">
-        <div class="inside-img-slot">
-          <div class="inside-img-icon">🖼️</div>
-          <div class="inside-img-label">Añade tu imagen aquí</div>
-          <div class="inside-img-sub">Actividades de Juego · Recomendado: 600×400px</div>
+        <div class="inside-img-slot" style="background-color: #f9f9f9; height: 450px;">
+          <img src="ebookinterna2.png" alt="Actividades de Juego" style="width:100%; height:100%; object-fit:contain; display:block;">
+          <div class="inside-img-sub">Actividades de Juego</div>
         </div>
         <div class="inside-card-bottom">
           <div class="inside-num">02</div>
           <div class="inside-body">
             <div class="inside-title">Actividades de Juego</div>
-            <div class="inside-desc">Juegos diseñados para activar áreas específicas del cerebro: lenguaje, motricidad fina y gruesa, concentración.</div>
+            <div class="inside-desc">Estimula el desarrollo de tu bebé desde los primeros meses con actividades simples y de forma natural.</div>
           </div>
         </div>
       </div>
+
       <div class="inside-card fade-up" style="transition-delay:0.1s">
-        <div class="inside-img-slot">
-          <div class="inside-img-icon">🖼️</div>
-          <div class="inside-img-label">Añade tu imagen aquí</div>
-          <div class="inside-img-sub">Actividades en Casa · Recomendado: 600×400px</div>
+        <div class="inside-img-slot" style="background-color: #f9f9f9; height: 450px;">
+          <img src="ebookinterna3.png" alt="Actividades fáciles" style="width:100%; height:100%; object-fit:contain; display:block;">
+          <div class="inside-img-sub">Actividades en Casa</div>
         </div>
         <div class="inside-card-bottom">
           <div class="inside-num">03</div>
           <div class="inside-body">
-            <div class="inside-title">Actividades en Casa</div>
+            <div class="inside-title">Actividades fáciles</div>
             <div class="inside-desc">Rutinas cotidianas convertidas en oportunidades de aprendizaje. El baño, la comida, el paseo — todo cuenta.</div>
           </div>
         </div>
       </div>
+
       <div class="inside-card fade-up" style="transition-delay:0.15s">
-        <div class="inside-img-slot">
-          <div class="inside-img-icon">🖼️</div>
-          <div class="inside-img-label">Añade tu imagen aquí</div>
-          <div class="inside-img-sub">Consejos de Expertos · Recomendado: 600×400px</div>
+        <div class="inside-img-slot" style="background-color: #f9f9f9; height: 450px;">
+          <img src="ebookinterna44.png" alt="Consejos de Expertos" style="width:100%; height:100%; object-fit:contain; display:block;">
+          <div class="inside-img-sub">Consejos de Expertos</div>
         </div>
         <div class="inside-card-bottom">
           <div class="inside-num">04</div>
           <div class="inside-body">
-            <div class="inside-title">Consejos de Expertos</div>
-            <div class="inside-desc">Respuestas a las preguntas más comunes de padres: señales de alerta, cuándo consultar, cómo manejar el estrés parental.</div>
+            <div class="inside-title">Actividades en Casa</div>
+            <div class="inside-desc">Actividades simples para estimular el desarrollo de tu hijo a través del juego y la exploración diaria.</div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
+    </div> </div> </section>
 <!-- ═══════ TRANSFORMATION ═══════ -->
 <section class="transform-section">
   <div class="container">
