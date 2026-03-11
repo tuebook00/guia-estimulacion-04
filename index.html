@@ -36,7 +36,7 @@ body {
   overflow-x:hidden;
 }
 
-/* --- NUEVO ESTILO: BOTÓN DE COMPRA FINAL --- */
+/* --- ESTILO: BOTÓN DE COMPRA FINAL --- */
 .btn-hotmart {
   background-color: var(--amber) !important;
   color: #1B3A5C !important;
@@ -48,6 +48,8 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  padding: 16px 32px; /* Ajuste para que tenga buen tamaño */
+  border-radius: 12px;
 }
 
 .btn-hotmart:hover {
@@ -55,10 +57,9 @@ body {
   transform: scale(1.05);
   box-shadow: 0 6px 25px rgba(245, 166, 35, 0.6);
 }
-/* ------------------------------------------- */
-</style>
+
 /* ═══════════════════════════════
-   UTILITY
+   UTILITY (Aquí estaba el error, ya está dentro del style)
 ═══════════════════════════════ */
 .container{max-width:1100px;margin:0 auto;padding:0 24px;}
 .tag{
@@ -69,6 +70,8 @@ body {
 .tag-orange{background:var(--orange);color:#fff;}
 .tag-outline{border:1.5px solid var(--orange);color:var(--orange);}
 
+/* RECUERDA: Todo tu CSS debe ir ANTES de esta etiqueta de cierre */
+</style>
 /* ═══════════════════════════════
    TOP BAR
 ═══════════════════════════════ */
