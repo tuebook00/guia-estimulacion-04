@@ -7,7 +7,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,800;0,9..144,900;1,9..144,300;1,9..144,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-:root{
+
+:root {
   --cream:#FEF7EE;
   --warm:#FFF3E4;
   --deep:#2E86C1;
@@ -23,13 +24,39 @@
   --border:rgba(27,58,92,0.10);
   --shadow:0 2px 40px rgba(27,58,92,0.10);
 }
-html{scroll-behavior:smooth;}
-body{
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   font-family:'Plus Jakarta Sans',sans-serif;
   background:var(--cream);
   color:var(--text);
   overflow-x:hidden;
 }
+
+/* --- NUEVO ESTILO: BOTÓN DE COMPRA FINAL --- */
+.btn-hotmart {
+  background-color: var(--amber) !important;
+  color: #1B3A5C !important;
+  border: none;
+  box-shadow: 0 4px 20px rgba(245, 166, 35, 0.4);
+  font-weight: 800;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-hotmart:hover {
+  background-color: var(--gold) !important;
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(245, 166, 35, 0.6);
+}
+/* ------------------------------------------- */
+</style>
 /* ═══════════════════════════════
    UTILITY
 ═══════════════════════════════ */
@@ -1303,15 +1330,15 @@ footer{
         <li>Acceso de por vida en todos tus dispositivos</li>
       </ul>
 
-      <a href="https://pay.hotmart.com/X104851507D" id="checkout-button"target="_blank" class="btn-primary-lg">
-        ¡Quiero empezar AHORA! →
-      </a>
-      <div class="price-guarantee">
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Garantía de devolución 7 días · Compra 100% segura
-      </div>
-    </div>
-  </div>
+  <a href="https://pay.hotmart.com/X104851507D" id="checkout-button" target="_blank" class="btn-primary-lg btn-hotmart">
+  ¡Quiero empezar AHORA! →
+</a>
+<div class="price-guarantee">
+  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+  </svg>
+  Garantía de devolución 7 días · Compra 100% segura
+</div>
 </section>
 
 <!-- FOOTER -->
