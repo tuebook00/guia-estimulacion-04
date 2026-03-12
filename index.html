@@ -934,14 +934,14 @@ footer{
 <!-- TOP BAR -->
 <div class="topbar">
   ⏳ <strong>Precio especial de lanzamiento</strong> — Solo por tiempo limitado. Ahorra 80% hoy.
-  <a href="#checkout-button">Ver oferta →</a>
+  <a href="precio">Ver oferta →</a>
 </div>
 
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
     <div class="nav-logo">Guía <span>Práctica</span></div>
-    <a href="#checkout-button" class="nav-cta">Obtener la guía →</a>
+    <a href="#precio" class="nav-cta">Obtener la guía →</a>
   </div>
 </nav>
 
@@ -984,7 +984,7 @@ footer{
         </ul>
 
         <div class="hero-cta-wrap fade-up" style="transition-delay:0.35s">
-          <a href="#checkout-button" class="btn-primary">
+          <a href="#precio" class="btn-primary">
             Quiero empezar HOY
             <span class="btn-arrow">→</span>
           </a>
@@ -1028,7 +1028,7 @@ footer{
                 <div class="stat-small">al día es<br>suficiente</div>
               </div>
             </div>
-            <a href="#checkout-button" class="btn-primary" style="width:100%;justify-content:center;font-size:15px;padding:14px;">
+            <a href="#precio" class="btn-primary" style="width:100%;justify-content:center;font-size:15px;padding:14px;">
               Ver precio especial →
             </a>
           </div>
@@ -1377,11 +1377,14 @@ footer{
         <li>Acceso de por vida en todos tus dispositivos</li>
       </ul>
 
-      <a href="https://pay.hotmart.com/X104851507D?checkoutMode=10"
-onclick="fbq('track','InitiateCheckout');"
-class="btn-primary-lg">
-¡Quiero empezar AHORA! →
-</a>
+   <section id="precio" class="price-section">
+    <div class="price-card">
+        <a href="https://pay.hotmart.com/X104851507D?checkoutMode=10" 
+           onclick="fbq('track','InitiateCheckout');" 
+           class="btn-primary-lg">
+           ¡Quiero empezar AHORA! →
+        </a>
+        
       <div class="price-guarantee">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         Garantía de devolución 7 días · Compra 100% segura
